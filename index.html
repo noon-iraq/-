@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title></title>
+<script>
+(function () {
+  const IOS = "https://apps.apple.com/iq/app/noon-%D9%86%D9%88%D9%86/id6803536309?l=ar";
+  const ANDROID = "https://play.google.com/store/apps/details?id=com.noon.iq";
+  const ua = navigator.userAgent || "";
+  const platform = navigator.platform || "";
+  const touch = navigator.maxTouchPoints || 0;
+
+  const isIOS =
+    /iPhone|iPad|iPod/i.test(ua) ||
+    (platform === "MacIntel" && touch > 1);
+
+  const isAndroid = /Android/i.test(ua);
+
+  if (isIOS) {
+    window.location.replace(IOS);
+  } else if (isAndroid) {
+    window.location.replace(ANDROID);
+  } else {
+    // الأجهزة الأخرى: لا توجد صفحة واجهة.
+    // يمكن تعديل هذا لاحقاً إذا أردت رابطاً احتياطياً.
+  }
+})();
+</script>
+</head>
+<body></body>
+</html>
